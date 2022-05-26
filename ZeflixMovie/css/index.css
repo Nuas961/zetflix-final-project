@@ -1,0 +1,404 @@
+:root {
+  --text-color: #ffffff;
+  --text-red: red; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a191f;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*Header*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  height: 60px;
+}
+
+.header__logo {
+  font-size: 50px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.header__logo span {
+  color: rgb(204, 18, 18);
+}
+
+.header__search {
+  width: 300px;
+  padding: 8px;
+  border: 2px solid #1a191f;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 50px;
+}
+
+nav {
+  float: right;
+  margin-left: 10px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-right: 50px;
+}
+
+/*Slider*/
+
+.slider {
+  margin: 0;
+  padding: 0;
+  margin-left: 220px;
+  margin-top: 50px;
+  color: var(--text-color);  
+  background-size: cover;
+}
+
+.slider-information { 
+  animation: show 5s;
+}
+
+.slider-information h2 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+@keyframes show {
+from {opacity: 0;} to {opacity: 1;}
+}
+
+.slider video {
+  width: 600px;
+  height: 400px;
+  display: block;
+  margin-left: 600px;
+  margin-top: -400px;
+}
+
+/*Pagination*/
+
+.pagination {
+  position: relative;
+  padding: 0px 0px 50px;
+  margin: auto;
+  width: 25%;
+}
+
+.pagination a {
+  color: var(--text-color);
+  float: left;
+  padding: 8px 16px ;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: rgb(245, 11, 11);
+  color: var(--text-color);
+}
+
+.pagination a:hover:not(.active) {
+  background-color: rgb(133, 129, 129);
+}
+
+/*Movies*/
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.movie {
+  width: 240px;
+  margin: 18px;
+  position: relative;
+}
+
+.movie__cover-inner {
+  position: relative;
+  height: 360px;
+}
+
+.movie_cover {
+  max-width: 100%;
+  height: 100%;
+}
+
+.movie__cover--darkened {
+  background-color: black;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.movie__cover--darkened:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.movie__info {
+  padding: 10px 0px;
+}
+
+.movie__title {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.movie__category {
+  font-size: 14px;
+  color: #ffd80e;
+}
+
+.movie__average {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a191f;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.movie__average--green {
+  border: 2px solid green;
+}
+
+.movie__average--orange {
+  border: 2px solid orange;
+}
+
+.movie__average--red {
+  border: 2px solid red;
+}
+
+/*Footer*/
+
+.footer-distributed {
+  background: rgb(32, 32, 32);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  font: bold 16px sans-serif;
+  text-align: center;
+  padding: 50px 230px 40px;
+  overflow: hidden;
+}
+
+.footer-distributed .footer-left {
+  float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+  color: var(--text-color);
+  font: normal 36px "Open Sans";
+  margin: 0 0 10px;
+}
+
+.footer-distributed h3 span {
+  color: rgb(204, 18, 18);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: var(--text-color);
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 30px;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons {
+  margin-top: 10px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+
+  font-size: 50px;
+  color: var(--text-color);
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  float: right;
+}
+
+.footer-distributed .footer-right p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px 42px 0 0;
+  color: var(--text-color);
+}
+
+/* The contact form */
+
+.footer-distributed form {
+  display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea {
+  display: block;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #1f2022;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  color: #d1d2d2;
+
+  width: 400px;
+  padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+  color: #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+  color: #5c666b;
+  opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder {
+  color: #5c666b;
+}
+
+.footer-distributed form input {
+  height: 55px;
+  margin-bottom: 15px;
+}
+
+.footer-distributed form textarea {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-distributed form button {
+  border-radius: 3px;
+  background-color: #33383b;
+  color: var(--text-color);
+  border: 0;
+  padding: 15px 50px;
+  font-weight: bold;
+  float: right;
+}
+
+@media (max-width: 1000px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-company-name {
+    font-size: 12px;
+  }
+
+  .footer-distributed form input,
+  .footer-distributed form textarea {
+    width: 250px;
+  }
+
+  .footer-distributed form button {
+    padding: 10px 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-distributed {
+    padding: 30px;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right {
+    float: none;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .footer-distributed .footer-left {
+    margin-bottom: 40px;
+  }
+
+  .footer-distributed form {
+    margin-top: 30px;
+  }
+
+  .footer-distributed form {
+    display: block;
+  }
+
+  .footer-distributed form button {
+    float: none;
+  }
+}
