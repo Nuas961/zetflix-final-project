@@ -70,7 +70,7 @@ nav a {
   margin-right: 50px;
 }
 
-/*Slider*/
+/*New movie information*/
 
 .slider {
   margin: 0;
@@ -401,4 +401,66 @@ from {opacity: 0;} to {opacity: 1;}
   .footer-distributed form button {
     float: none;
   }
+}
+
+@media (max-width: 425px) {
+  /*Header*/
+  
+.container {
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150px;
+  height: 60px;
+}
+
+.header__logo {
+  font-size: 100px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+
+.header__search {
+  width: 300px;
+  padding: 8px;
+  border: 2px solid #1a191f;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 100px;
+}
+
+nav {
+  float: right;
+  margin-left: 30px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-right: 50px;
+}
+
+.film-filter {
+  display: flex;
+  display: inline-block;
+  margin-right: 30px;
+}
+  
 }
